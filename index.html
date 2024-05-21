@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/actividad4B_estilos.css" id="estilosAccesibles">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+    <!-- Botones para cambiar entre estilos de diseño -->
+    <div>
+        <button onclick="cambiarEstilo('estandar')">Diseño Estándar</button>
+        <button onclick="cambiarEstilo('accesible')">Diseño Accesible</button>
+    </div>
+
+    <form method="post" action="formulario.php">
+        <div class="seccion1">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" id="contraseña">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+            <label for="repetircontra">Repetir contraseña:</label>
+            <input type="password" name="repetircontra" id="repetircontra">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+            <label for="direccion">Direccion:</label>
+            <input type="text" name="direccion" id="direccion">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" name="ciudad" id="ciudad">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+            <label for="provincia">Provincia:</label>
+            <input type="text" name="provincia" id="provincia">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+            <label for="huespedes">No. de huespedes:</label>
+            <input type="number" name="huespedes" id="huespedes">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+        </div>
+
+        <div class="seccion2">
+            <label for="servicios" >Servicios</label>
+            <a href="/inputs.html">(Justificacion)</a>
+            <br>
+            <!-- Aquí irían los radios de servicios -->
+            <br>
+                <input type="radio" name="servicios" value="1" >
+                <label for="servicios">Aire acondicionado</label>
+
+                <input type="radio" name="servicios" value="2" >
+                <label for="servicios">Almohadas a la carta </label>
+                
+                <br>
+                <input type="radio" name="servicios" value="3" >
+                <label for="servicios">Caja Fuerte</label>
+
+                <input type="radio" name="servicios" value="4" >
+                <label for="servicios">Detecror de humo </label>
+
+                <br>
+                <input type="radio" name="servicios" value="5" >
+                <label for="servicios">Minibar</label>
+
+                <input type="radio" name="servicios" value="6" >
+                <label for="servicios">Mesa de trabajo</label>
+                <br>
+                <input type="radio" name="servicios" value="7" >
+                <label for="servicios">Conexion a internet</label>
+
+                <input type="radio" name="servicios" value="8" >
+                <label for="servicios">WIFI</label>
+
+                <br>
+        
+        </div>
+
+        <div class="seccion3">
+            <label for="habitacion" style="font-size: 28px; font-weight: 700; margin-top: 20px;">Habitacion</label>
+            <a href="/inputs.html">(Justificacion)</a>
+            <br>
+            <!-- Aquí irían los checkboxes de habitación -->
+            <input type="checkbox" name="habitacion" value="1" >
+            <label for="habitacion">Individual</label>
+            <br>
+            <input type="checkbox" name="habitacion" value="2">
+            <label for="habitacion">Doble</label>
+            <br>
+            <input type="checkbox" name="habitacion" value="3" >
+            <label for="habitacion">Suite</label>
+            <br><br>
+        </div>
+
+        <div class="seccion4">
+            <label for="pension" style="font-size: 28px; font-weight: 700; margin-top: 20px;">Pension</label>
+            <a href="/inputs.html">(Justificacion)</a>
+            <br>
+            <!-- Aquí irían los checkboxes de pensión -->
+            <input type="checkbox" name="pension" value="1" style="margin-left: 30px;">
+            <label for="pension">Alojamiento</label>
+            <br>
+            <input type="checkbox" name="pension" value="2" style="margin-left: 30px;">
+            <label for="pension">Desayuno</label>
+            <br>
+            <input type="checkbox" name="pension" value="3" style="margin-left: 30px;">
+            <label for="pension">Media</label>
+            <br>
+            <input type="checkbox" name="pension" value="4" style="margin-left: 30px;">
+            <label for="pension">Completa</label>
+            <br><br>
+        </div>
+
+        <div class="seccion5">
+            <label for="comentarios" style="font-size: 28px; font-weight: 700; margin-top: 20px;">Comentarios o sugerencias </label>
+            <a href="/inputs.html">(Justificacion)</a>
+            <br>
+            <textarea name="comentarios" id="comentarios" cols="50" rows="10"></textarea>
+            <br><br>
+            <label for="email">Email de Contacto</label>
+            <input type="text" name="email" id="email">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+        </div>
+
+        <div class="seccion6">
+            <label for="politica" style="font-size: 28px; font-weight: 700; margin-top: 20px;">Política de Privacidad</label>
+            <input type="checkbox" name="politica" style="margin-left: 20px;">
+            <label for="politica">Acepto la politica de privacidad</label>
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+        </div>
+
+        <div class="seccion7">
+            <input type="button" name="enviar" value="Enviar" style="margin-top: 20px;margin-left: 30px;">
+            <a href="/inputs.html">(Justificacion)</a>
+            <input type="button" name="enviar" value="Enviar" style="margin-top: 20px;margin-left: 30px;">
+            <a href="/inputs.html">(Justificacion)</a>
+            <br><br>
+        </div>
+    </form>
+
+
+    <script>
+        function cambiarEstilo(estilo) {
+            var linkEstilos = document.getElementById('estilosAccesibles');
+            if (estilo === 'accesible') {
+                
+                linkEstilos.href = "/css/actividad4B_estilos.css";
+            } else {
+                linkEstilos.href = "/css/actividad4A_estilos.css";
+            }
+        }
+    </script>
+</body>
+</html>
