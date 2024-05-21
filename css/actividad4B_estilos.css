@@ -1,0 +1,90 @@
+@import url('/css/actividad4A_estilos.css');
+
+/* Redefinir estilos para mejorar accesibilidad */
+/* Ajustes de tamaño y tipo de letra */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Fondo blanco para un mejor contraste */
+    color: #333; /* Color de texto oscuro para mejorar la legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #ffa000; /* Fondo amarillo */
+    color: #333; /* Texto oscuro para mejorar el contraste */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff8f00; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilos para secciones */
+.seccion1,
+.seccion2,
+.seccion3,
+.seccion4,
+.seccion5,
+.seccion6,
+.seccion7 {
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px; 
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="button"] {
+    width: auto;
+    padding: 10px 20px;
+    margin-right: 10px;
+
+}
+
+
+textarea {
+    height: 100px;
+}
+
+
+.seccion7 input[type="button"] {
+    background-color: #4caf50;
+}
+
+.seccion7 input[type="button"]:hover {
+    background-color: #388e3c;
+}
