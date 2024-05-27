@@ -1,29 +1,8 @@
 pipeline {
     agent any
-    environment {
-        MYSQL_URL = credentials("MYSQL_URL")
-        MYSQL_USER = credentials("MYSQL_USER")
-        MYSQL_PASS = credentials("MYSQL_PASS")
-    }
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-        stage('Install dependencies') {
-            steps {
-                sh 'composer install'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'php bin/console cache:clear --env=prod'
-            }
-        }
         stage('Deploy') {
             steps {
-                sh 'symfony server:start'
+                sh 'php -S localhost:8081 -t.'
             }
         }
     }
@@ -35,8 +14,8 @@ pipeline {
                     subject: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                     body: """<p>Build ${env.JOB_NAME} #${env.BUILD_NUMBER} finished with status: ${currentBuild.currentResult}</p>
                              <p>Check console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
-                    to: 'cnolazco@ucol.mx',
-                    from: 'cnolazco@ucol.mx',
+                    to: 'scruz4@ucol.mx',
+                    from: 'scruz4@ucol.mx',
                 )
             }
         }
@@ -47,8 +26,8 @@ pipeline {
                     subject: "SUCCESS: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                     body: """<p>Build ${env.JOB_NAME} #${env.BUILD_NUMBER} finished successfully.</p>
                              <p>Check console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
-                    to: 'cnolazco@ucol.mx',
-                    from: 'cnolazco@ucol.mx',
+                    to: 'scruz4@ucol.mx',
+                    from: 'scruz4@ucol.mx',
                 )
             }
         }
@@ -59,8 +38,8 @@ pipeline {
                     subject: "FAILURE: Build ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                     body: """<p>Build ${env.JOB_NAME} #${env.BUILD_NUMBER} failed.</p>
                              <p>Check console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
-                    to: 'cnolazco@ucol.mx',
-                    from: 'cnolazco@ucol.mx',
+                    to: 'scruz4@ucol.mx',
+                    from: 'scruz4@ucol.mx',
                 )
             }
         }
