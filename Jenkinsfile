@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                sh 'php -S localhost:8081 -t.'
+                sh '/opt/homebrew/bin/php -S localhost:8081 -t.'
             }
         }
     }
