@@ -1,5 +1,19 @@
 pipeline {
     agent any
+        stages {
+        stage('Inicio') {
+            steps {
+                script {
+                    emailext (
+                        subject: "Inicio de Pipeline: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                        body: """<p>El proceso en jenkins ${env.JOB_NAME} #${env.BUILD_NUMBER} ha comenzado.</p>
+                                 <p>Puede seguir el progreso en <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
+                        to: 'ccruz4@ucol.mx',
+                        from: 'ccruz4@ucol.mx',
+                    )
+                }
+            }
+        }
     stages {
         stage('Deploy') {
             steps {
