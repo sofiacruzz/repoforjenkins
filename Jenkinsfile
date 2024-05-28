@@ -1,6 +1,6 @@
 pipeline {
     agent any
-        stages {
+    stages {
         stage('Inicio') {
             steps {
                 script {
@@ -14,7 +14,6 @@ pipeline {
                 }
             }
         } 
-    stages {
         stage('Deploy') {
             steps {
                 sh '/opt/homebrew/bin/php -S localhost:8081 -t.'
